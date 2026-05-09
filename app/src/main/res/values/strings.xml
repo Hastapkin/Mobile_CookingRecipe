@@ -1,3 +1,10 @@
 <resources>
+    <string name="navigate_up">Go back</string>
+    <string name="mark_lesson_complete_label">Check this box to mark completion</string>
+    <string name="video_lesson_intro">Tap the button below to open this lesson in the YouTube app or your browser.</string>
+    <string name="assignment_missing_options_hint">No answer choices were provided for this question.</string>
+    <string name="assignment_need_answers_hint">Select an answer for each question before submitting.</string>
+    <string name="profile_photo">Profile photo</string>
     <string name="app_name">CookingRecipe</string>
+    <string name="api_base_url">https://recipe-api-t5t0.onrender.com/api</string>
 </resources>

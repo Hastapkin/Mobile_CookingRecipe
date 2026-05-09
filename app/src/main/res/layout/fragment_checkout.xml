@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_secondary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Payment Method"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/payment_method_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/method_vietqr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="VietQR"
+                android:textColor="@color/text_primary" />
+
+            <RadioButton
+                android:id="@+id/method_paypal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PayPal"
+                android:textColor="@color/text_primary" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/vietqr_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/upload_proof_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/secondary"
+            android:text="Upload Payment Proof"
+            android:textColor="@color/text_inverse" />
+
+        <Button
+            android:id="@+id/submit_payment_button_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/primary"
+            android:text="Submit Payment"
+            android:textColor="@color/text_inverse" />
+
+        <ImageView
+            android:id="@+id/payment_proof_preview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/submit_payment_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary"
+            android:text="Submit Payment"
+            android:textColor="@color/text_inverse"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

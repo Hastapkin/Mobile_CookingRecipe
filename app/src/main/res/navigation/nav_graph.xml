@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cookingrecipe.ui.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.cookingrecipe.ui.courses.CoursesFragment"
+        android:label="Courses">
+        <action
+            android:id="@+id/action_courses_to_course_detail"
+            app:destination="@id/courseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.example.cookingrecipe.ui.courses.CourseDetailFragment"
+        android:label="Course Detail">
+        <action
+            android:id="@+id/action_course_detail_to_course_learn"
+            app:destination="@id/courseLearnFragment" />
+        <action
+            android:id="@+id/action_course_detail_to_cart"
+            app:destination="@id/cartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.cookingrecipe.ui.cart.CartFragment"
+        android:label="Cart">
+        <action
+            android:id="@+id/action_cart_to_checkout"
+            app:destination="@id/checkoutFragment" />
+        <action
+            android:id="@+id/action_cart_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.cookingrecipe.ui.cart.CheckoutFragment"
+        android:label="Checkout">
+        <argument
+            android:name="transactionId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cookingrecipe.ui.auth.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.cookingrecipe.ui.auth.RegisterFragment"
+        android:label="Register" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.cookingrecipe.ui.profile.ProfileFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profile_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profile_to_about"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_profile_to_contact"
+            app:destination="@id/contactFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myCoursesFragment"
+        android:name="com.example.cookingrecipe.ui.courses.MyCoursesFragment"
+        android:label="My Courses">
+        <action
+            android:id="@+id/action_my_courses_to_course_learn"
+            app:destination="@id/courseLearnFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.example.cookingrecipe.ui.orders.MyOrdersFragment"
+        android:label="My Orders" />
+
+    <fragment
+        android:id="@+id/courseLearnFragment"
+        android:name="com.example.cookingrecipe.ui.courses.CourseLearnFragment"
+        android:label="Course Learn" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.cookingrecipe.ui.misc.AboutFragment"
+        android:label="About" />
+
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.cookingrecipe.ui.misc.ContactFragment"
+        android:label="Contact" />
+
+</navigation>

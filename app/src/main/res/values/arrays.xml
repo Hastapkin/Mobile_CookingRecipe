@@ -1,0 +1,20 @@
+<resources>
+    <string-array name="sort_options">
+        <item>Newest First</item>
+        <item>Most Popular</item>
+        <item>Highest Rated</item>
+        <item>Price: Low to High</item>
+    </string-array>
+    <string-array name="order_status_filter_labels">
+        <item>All orders</item>
+        <item>Pending</item>
+        <item>Verified</item>
+        <item>Rejected</item>
+    </string-array>
+    <string-array name="my_courses_sort_options">
+        <item>Newest First</item>
+        <item>Highest Rated</item>
+        <item>Most Modules</item>
+        <item>Price: Low to High</item>
+    </string-array>
+</resources>
